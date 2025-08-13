@@ -202,7 +202,11 @@ if st.button('Calcular'):
 
                 # Exibe o valor final
                 valor_final_liquido = tabela_diaria['Valor Líquido'].iloc[-1]
+                valor_final_bruto = tabela_diaria['Valor Bruto'].iloc[-1]
+
+                st.success(f"Valor Final do Investimento (Bruto): **R${valor_final_bruto:.2f}**")
                 st.success(f"Valor Final do Investimento (Líquido): **R${valor_final_liquido:.2f}**")
+                
             else:
                 st.warning("Não foi possível gerar a tabela. Verifique os dados da API.")
         else:
